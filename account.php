@@ -1,6 +1,15 @@
 <?php
 include('connection.php');
+session_start();
+error_reporting(0);
+$code = $_SESSION['code'];
+if($code == "")
+{
+    echo "<script>window.location.href = '../index.html';</script>";
+}
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,8 +44,8 @@ include('connection.php');
 
       <nav>
         <ul>
-          <li><a href="seeker.php">Seeker</a></li>
-          <li><a href="rider.php">Rider</a></li>
+          <li><a href="seeker_g.php">Seeker</a></li>
+          <li><a href="rider_g.php">Rider</a></li>
         </ul>
       </nav>
     </header>
@@ -49,20 +58,27 @@ include('connection.php');
             <?php
             session_start();
             error_reporting(0);
-            $xyz = $_SESSION['email']; 
-            if($xyz == true)
-            {
-            }  
-            else 
-            {
-                header('location:login.php');
-            }
 
-            $query = "SELECT * FROM acc_registration WHERE Email = '$xyz'";
-            $data = mysqli_query($conn, $query);
-            $total = mysqli_num_rows($data);
-            if($total != 0)
-                    {
+            $uemail = $_SESSION['uemail'];
+            $ulast_name = $_SESSION['ulast_name'];
+            $ufirstname = $_SESSION['ufirstname'];
+            $uname = $_SESSION['uname'];
+            $profile_pic = $_SESSION['profile_pic'];
+
+            // $xyz = $_SESSION['email']; 
+            // if($xyz == true)
+            // {
+            // }  
+            // else 
+            // {
+            //     header('location:login.php');
+            // }
+
+            // $query = "SELECT * FROM acc_registration WHERE Email = '$uemail'";
+            // $data = mysqli_query($conn, $query);
+            // $total = mysqli_num_rows($data);
+            // if($total != 0)
+            //         {
                         ?>
                         <center>
                         <table border="0px solid green" cellspacing="10" width="100%">
@@ -70,22 +86,18 @@ include('connection.php');
                             <th width="10%" style="text-align: center;" class="pp">First_Name</th>
                             <th width="10%" style="text-align: center;">Last_Name</th>
                             <th width="10%" style="text-align: center;">Email</th>
-                            <th width="10%" style="text-align: center;">Phone_No</th>
                             <br>
                         <?php
-                        while($cc = mysqli_fetch_assoc($data))
-                        {
+                        // while($cc = mysqli_fetch_assoc($data))
+                        // {
                             echo "
                             <tr>
-                            <td style='text-align: center;'><img src = '$cc[img_src]' style='width:75px; height:75px; border-radius:15px;'></td>
-                            <td style='text-align: center;' class='pp'>$cc[First_Name]</td>
-                            <td style='text-align: center;'>$cc[Last_Name]</td>
-                            <td style='text-align: center;'>$cc[Email]</td>
-                            <td style='text-align: center;'>$cc[Phone_No]</td>
+                            <td style='text-align: center;'><img src = '$profile_pic' style='width:75px; height:75px; border-radius:15px;'></td>
+                            <td style='text-align: center;' class='pp'>$ufirstname</td>
+                            <td style='text-align: center;'>$ulast_name</td>
+                            <td style='text-align: center;'>$uemail</td>
                             </tr><br>
                             ";
-                        }
-                    }
             ?>
 
             <table id="rider-table">

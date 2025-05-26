@@ -4,6 +4,7 @@ $username = "1223600";
 $password = "231fa04a52";
 $dbname = "1223600";
 
+
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 if(!$conn)
