@@ -4,6 +4,7 @@ Download the following packages:-
   2. Google/apiclient:- https://packagist.org/packages/google/apiclient
 
 Using Composer:-
-      PHPMailer:- composer require phpmailer/phpmailer
-      Google/apiclient:- composer require google/apiclient
+      1. PHPMailer:- composer require phpmailer/phpmailer
+      2. Google/apiclient:- composer require google/apiclient
+      
 Note:- Inside vendor folder make sure you have the autoload.php
