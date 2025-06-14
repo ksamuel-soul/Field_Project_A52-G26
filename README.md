@@ -1,9 +1,9 @@
 Download the following packages:-
-      using composer download the below packages...
-  1. PhpMailer:-
-         https://github.com/PHPMailer/PHPMailer
-  3. Google/apiclient:-
-  4.       https://packagist.org/packages/google/apiclient
+using composer download the below packages...
+PhpMailer:-
+*       https://github.com/PHPMailer/PHPMailer
+Google/apiclient:-
+*      https://packagist.org/packages/google/apiclient
 
 Using Composer:-     
 1. PHPMailer:-
