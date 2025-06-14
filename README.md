@@ -21,3 +21,19 @@ PhpMailer:-
 Google/apiclient:-
 *      https://packagist.org/packages/google/apiclient
 Note:- Inside vendor folder make sure you have the autoload.php
+
+
+📘 Database Schema Documentation
+📂 Database Name: field_project_batch_17
+📄 Table Name: acc_registration
+This table stores account registration details including user personal information, login credentials, and a reference to an image source. It contains 7 columns.
+
+🔢 Table Structure
+Column Name	Data Type	Description	Constraints
+S.No	INT	Unique ID for each user	Primary Key, AUTO_INCREMENT, NOT NULL
+First_Name	VARCHAR(100)	User's first name	NOT NULL
+Last_Name	VARCHAR(100)	User's last name	NOT NULL
+Email	VARCHAR(100)	User's email address	NOT NULL
+Phone_No	VARCHAR(100)	User's phone number	NOT NULL
+Password	VARCHAR(50)	User's password (hashed)	NOT NULL
+img_src	VARCHAR(500)	Path or URL to the user image source	NOT NULL
