@@ -1,5 +1,4 @@
-Download the following packages:- 
-
+# Download the following packages:- 
 Make sure you have Php installed in your system..!!!  
 
    The provided link is Php Version 8.4 
@@ -29,8 +28,6 @@ Note:- Inside vendor folder make sure you have the autoload.php
 
 ## 📄 Table Name: `acc_registration`
 
-This table stores account registration details including user personal information, login credentials, and a reference to an image source. It contains 7 columns.
-
 ---
 
 ### 🔢 Table Structure
@@ -47,13 +44,7 @@ This table stores account registration details including user personal informati
 
 ---
 
-# 📘 Database Schema Documentation
-
-## 📂 Database Name: `field_project_batch_17`
-
 ## 📄 Table Name: `rider`
-
-This table contains ride booking details including user information, travel source and destination, timing, vehicle details, pricing, and status-related fields.
 
 ---
 
