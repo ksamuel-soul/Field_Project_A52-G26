@@ -6,10 +6,6 @@ Make sure you have Php installed in your system..!!!
 
 using composer download the below packages... 
 *      https://getcomposer.org/Composer-Setup.exe
-PhpMailer:-
-*       https://github.com/PHPMailer/PHPMailer
-Google/apiclient:-
-*      https://packagist.org/packages/google/apiclient
 
 Using Composer:-     
 1. PHPMailer:-
@@ -18,5 +14,9 @@ Using Composer:-
 3. Google/apiclient:-  
       
        composer require google/apiclient
-      
+   
+PhpMailer:-
+*       https://github.com/PHPMailer/PHPMailer
+Google/apiclient:-
+*      https://packagist.org/packages/google/apiclient
 Note:- Inside vendor folder make sure you have the autoload.php
