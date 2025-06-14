@@ -47,21 +47,35 @@ This table stores account registration details including user personal informati
 
 ---
 
-### 🔐 Primary Key
+# 📘 Database Schema Documentation
 
-- `S.No` is the **Primary Key** and is **Auto Incremented** to uniquely identify each record.
+## 📂 Database Name: `field_project_batch_17`
 
----
+## 📄 Table Name: `rider`
 
-### 🌐 Collation
-
-- All text fields use: `utf8mb4_0900_ai_ci` collation.
+This table contains ride booking details including user information, travel source and destination, timing, vehicle details, pricing, and status-related fields.
 
 ---
 
-### 🗂️ Notes
+### 🔢 Table Structure
 
-- All fields are **mandatory** (no `NULL` values allowed).
-- No default values are set.
-- No partitioning is defined for the table.
+| Column Name   | Data Type      | Description                                 | Constraints                         |
+|---------------|----------------|---------------------------------------------|-------------------------------------|
+| `R_id`        | INT            | Unique ID for each ride                     | Primary Key, Auto Increment, NOT NULL |
+| `Username`    | VARCHAR(100)   | Name of the user requesting the ride        | NOT NULL                            |
+| `Source`      | VARCHAR(100)   | Ride starting point                         | NOT NULL                            |
+| `Destination` | VARCHAR(100)   | Ride ending point                           | NOT NULL                            |
+| `Date`        | VARCHAR(20)    | Ride date                                   | NOT NULL                            |
+| `Time`        | VARCHAR(20)    | Ride time                                   | NOT NULL                            |
+| `Vehicle_Name`| VARCHAR(100)   | Name of the vehicle                         | NOT NULL                            |
+| `Car_Num`     | VARCHAR(100)   | Vehicle registration number                 | NOT NULL                            |
+| `Seat_Status` | INT            | Number of available seats                   | NULLABLE                            |
+| `Price`       | BIGINT         | Fare price                                  | NULLABLE                            |
+| `S_Username`  | VARCHAR(50)    | Username of the service provider (driver)   | NULLABLE                            |
+| `Status`      | VARCHAR(50)    | Ride status                                 | Default: `Not_Booked`, NULLABLE     |
+| `Pay_Status`  | VARCHAR(50)    | Payment status                              | NULLABLE                            |
+| `Pay_Mode`    | VARCHAR(50)    | Mode of payment                             | NULLABLE                            |
+| `Request`     | VARCHAR(50)    | Request status                              | NULLABLE                            |
+
+---
 
