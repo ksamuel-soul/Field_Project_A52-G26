@@ -23,12 +23,20 @@ Google/apiclient:-
 Note:- Inside vendor folder make sure you have the autoload.php
 
 
-📘 Database Schema Documentation
-📂 Database Name: field_project_batch_17
-📄 Table Name: acc_registration
-This table stores account registration details including user personal information, login credentials, and a reference to an image source. It contains 7 columns.
+📘 Database Schema Documentation 
+
+
+📂 Database Name:
+*      field_project_batch_17 
+
+
+📄 Table Name: 
+*      acc_registration  
+
 
 🔢 Table Structure
+
+
 Column Name	Data Type	Description	Constraints
 S.No	INT	Unique ID for each user	Primary Key, AUTO_INCREMENT, NOT NULL
 First_Name	VARCHAR(100)	User's first name	NOT NULL
